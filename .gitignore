@@ -1,0 +1,11 @@
+logs/
+
+.vscode/
+*.toml
+
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+venv
