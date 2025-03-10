@@ -1,11 +1,29 @@
-logs/
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
+# Ignore virtual environments
+venv/
+.venv/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore VS Code settings
 .vscode/
-*.toml
 
+# Ignore logs and environment files
+*.log
+.env
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# Ignore all .jpg files
+*.jpg
 
-# Environments
-venv
+# Ignore all .txt files
+*.txt
+
+# Ignore hidden MacOS system files
+.DS_Store
+__MACOSX/
