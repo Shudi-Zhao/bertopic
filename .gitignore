@@ -27,3 +27,10 @@ venv/
 # Ignore hidden MacOS system files
 .DS_Store
 __MACOSX/
+
+# Ignore partial ZIP files
+*.zip_part
+*.zip.*
+*.tar.*
+*.rar.*
+*.7z.*
