@@ -10,46 +10,68 @@ All the code in this repository is based on the **official BERTopic documentatio
 
 BERTopic follows a structured process to extract meaningful topics from textual data. Below are the key steps:
 
-1️⃣ **Embedding the Text**  
-   - Convert documents into numerical representations using techniques like:
-     - `sentence-transformers`
-     - `TF-IDF`
-     - `spaCy`
-     - `Flair`
-     - `OpenAI Embeddings`
+### **1️⃣ Embedding the Text**
+Convert documents into numerical representations using different techniques:
+- `sentence-transformers`
+- `TF-IDF`
+- `spaCy`
+- `Flair`
+- `OpenAI Embeddings`
 
-2️⃣ **Dimensionality Reduction**  
-   - Reduce the high-dimensional embeddings to a lower-dimensional space for better clustering.
-   - Common techniques:
-     - `UMAP (Uniform Manifold Approximation and Projection)`
-     - `PCA (Principal Component Analysis)`
-     - `Truncated SVD`
+---
 
-3️⃣ **Clustering**  
-   - Group similar documents together into clusters.
-   - **Default algorithm:** `HDBSCAN (Hierarchical Density-Based Clustering)`
-   - Alternative methods: `k-Means`, `Agglomerative Clustering`
+### **2️⃣ Dimensionality Reduction**
+Reduce the high-dimensional embeddings to a lower-dimensional space for better clustering.
+Common techniques:
+- `UMAP` (Uniform Manifold Approximation and Projection)
+- `PCA` (Principal Component Analysis)
+- `Truncated SVD`
 
-4️⃣ **Topic Representation**  
-   - Extract meaningful words for each topic.
-   - Default method: `c-TF-IDF (Class-based Term Frequency-Inverse Document Frequency)`
-   - Other techniques:
-     - `Maximal Marginal Relevance (MMR)`
-     - `KeyBERT Inspired`
-     - `LLMs (GPT, Cohere, OpenAI)`
+---
 
-5️⃣ **Refinement & Visualization**  
-   - Fine-tune topics using:
-     - `Topic Reduction`
-     - `Merging or Splitting Topics`
-     - `Multi-Aspect Representations`
-   - Visualize topics using:
-     - `UMAP`
-     - `Topic Similarity Graphs`
-     - `Word Clouds`
+### **3️⃣ Clustering**
+Group similar documents together into clusters.
+- **Default algorithm**: `HDBSCAN` (Hierarchical Density-Based Clustering)
+- **Alternative methods**: `k-Means`, `Agglomerative Clustering`
 
-6️⃣ **Dynamic Topic Modeling (Optional)**  
-   - Track topic evolution over time using `topics_over_time()`.
+---
+
+### **4️⃣ Vectorization**
+Convert text into a numerical representation for topic extraction.
+- **Default method**: `CountVectorizer`
+- **Alternative vectorizers**:
+  - `TF-IDF`
+  - `OnlineCountVectorizer` (for online learning)
+  - `Custom Vectorizers` (e.g., BERT embeddings for contextual tokenization)
+
+---
+
+### **5️⃣ Topic Representation**
+Extract meaningful words for each topic.
+- **Default method**: `c-TF-IDF` (Class-based Term Frequency-Inverse Document Frequency)
+- **Other techniques**:
+  - `Maximal Marginal Relevance (MMR)`
+  - `KeyBERT Inspired`
+  - `LLMs` (GPT, Cohere, OpenAI)
+
+---
+
+### **6️⃣ Refinement & Visualization**
+Fine-tune topics using:
+- `Topic Reduction`
+- `Merging or Splitting Topics`
+- `Multi-Aspect Representations`
+
+Visualize topics using:
+- `UMAP`
+- `Topic Similarity Graphs`
+- `Word Clouds`
+
+---
+
+### **7️⃣ Dynamic Topic Modeling (Optional)**
+Track topic evolution over time using `topics_over_time()`.
+
 
 **BERTopic is highly modular**, allowing customization at every step for different use cases.  
 
